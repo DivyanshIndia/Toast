@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Project with Storybook Toast Component
 
-## Getting Started
+This repository contains a Next.js project integrated with Storybook to develop and test a Toast component.
 
-First, run the development server:
+## Overview
+
+The Toast component is designed to provide feedback messages for user actions in the form of a brief notification. This project demonstrates how to set up Storybook in a Next.js environment to facilitate component-driven development and testing.
+
+## Prerequisites
+
+- Node.js
+- npm (or yarn)
+
+## Installation
+
+Clone the repository and install the dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/DivyanshIndia/Toast
+cd your-nextjs-project
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running the Next.js App
+```
+npm run dev
+```
+Visit http://localhost:3000 in your browser to view the app.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Setting Up Storybook
+```
+npm run storybook
+```
+Storybook will be available at http://localhost:6006.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Using the Toast Component
+The Toast component can be used to display different types of messages, such as information, warnings, errors, and success notifications.
 
-## Learn More
+# Props
+type: Specifies the type of toast (default, notification).
+icon: The icon displayed (information, warning, error, success).
+text: The message text.
+actionText: Text for the action button (optional).
+showCloseButton: Whether to show the close button (boolean).
+showDivider: Whether to show a divider line (boolean).
+onClick: Function to call when the action button is clicked (optional).
 
-To learn more about Next.js, take a look at the following resources:
+```
+import Toast from './components/Toast';
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<Toast
+  toastType="default"
+  iconType="information"
+  text="This is an information toast"
+  showCloseButton={true}
+  showDivider={true}
+/>
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
