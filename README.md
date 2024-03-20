@@ -36,7 +36,7 @@ Storybook will be available at http://localhost:6006.
 ## Using the Toast Component
 The Toast component can be used to display different types of messages, such as information, warnings, errors, and success notifications.
 
-# Props
+## Props
 type: Specifies the type of toast (default, notification).
 icon: The icon displayed (information, warning, error, success).
 text: The message text.
