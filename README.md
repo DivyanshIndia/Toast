@@ -49,11 +49,13 @@ onClick: Function to call when the action button is clicked (optional).
 import Toast from './components/Toast';
 
 <Toast
-  type="default"
-  icon="information"
+  type="default" // options: "default", "notification"
+  icon="information" // visible only when type="notification"
   text="information toast"
   showCloseButton={true}
   showDivider={true}
+  time={5000} // options: 5000, 3000, null
+  actionText= "Undo" // action button text
 />
 ```
 
